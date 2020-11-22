@@ -1,22 +1,19 @@
-import { render } from '@testing-library/react';
-import React, { Component} from 'react';
+import React, { Component } from 'react';
 
 class Products extends Component {
-    render() {
-        const products = ["Learning React","Pro React","Beginning React"] ;
-        const listProducts = products.map((products) =>
-    <li key={product.toString()}>{product}</li>
-);
+  
+  render() {
+    const products = ["Learning React","Pro React","Beginning React"];
+    const listProducts = products.map((product) => 
+        <li key={product.toString()}>{product}</li>
+    );
 
-        return (
-            <div>
-                <h2>
-                    <ul>Products </ul>
-                </h2>
-            </div>
-
-        );
-    }
+    return (
+      <div>
+        <ul>{listProducts}</ul>     
+      </div>
+    );
+  }
 }
 
-export default Products
+export default Products;
