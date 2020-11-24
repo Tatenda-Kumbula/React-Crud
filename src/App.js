@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import Products from './Products';
+import GitHub from './GitHub';
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
 
 class App extends Component {
   render() {        
     return (
       <div>
-        <Products />        
+        <Header />        
       </div>
     );
   }
