@@ -5,8 +5,16 @@ import { Media, Form, Button } from 'react-bootstrap';
 
 class GitHub extends Component {
 
-    constructor() {
-        super();
-        this.getGitHubData('greg')
+    constructor(){
+        super();  
+        this.state = {
+            data: [],
+            searchTerm:'',
+            isLoading : false            
+
+        }; 
+
+        this.handleChange = this.handleChange.bind(this);  
+        this.handleSubmit = this.handleSubmit.bind(this);  
+
     }
-}
