@@ -35,3 +35,22 @@ class GitHub extends Component {
                 console.log(res.data.items); 
             });             
     }   
+
+    render() { 
+        const listUsers = this.state.data.map(user =>             
+            <Media key={user.id}>
+                <a href={user.html_url}>    
+                    <img
+                        width={64}
+                        height={64}
+                        className="mr-3"
+                        src={user.avatar_url}
+                        alt="Generic placeholder"
+                    />
+                </a>
+                <Media.Body>
+                    <h5>Login: {user.login}</h5>
+                    <p>Id: { user.id }</p>
+                </Media.Body>
+            </Media>                     
+        );        
