@@ -18,3 +18,20 @@ class GitHub extends Component {
         this.handleSubmit = this.handleSubmit.bind(this);  
 
     }
+
+    componentDidMount(){
+        //this.getGitHubData('greg');
+    }	
+
+
+    getGitHubData(_searchTerm){                
+        axios.get("https://api.github.com/search/users?q="+_searchTerm)
+            .then(res => {   
+                this.setState({
+                    isLoading : false, 
+                    data: res.data.items                                  
+                })  
+                             
+                console.log(res.data.items); 
+            });             
+    }   
